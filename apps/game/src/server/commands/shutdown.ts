@@ -41,5 +41,5 @@ export const shutdownCommand: CommandHandler = (ctx: CommandContext, args: strin
     return;
   }
 
-  ctx.reply(`Server shutdown scheduled in ${minutes} minute(s).`, MessageStyle.Orange);
+  ctx.reply(`Server shutdown scheduled in ${minutes} minute${minutes === 1 ? '' : 's' }.`, MessageStyle.Orange);
 };
