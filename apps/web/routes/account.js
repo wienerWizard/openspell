@@ -101,7 +101,7 @@ router.get('/', async (req, res) => {
         const hoursSinceChange = (now - lastChange) / (1000 * 60 * 60);
         if (hoursSinceChange < 24) {
             const hoursRemaining = Math.ceil(24 - hoursSinceChange);
-            passwordCooldownInfo = `<li style="color: #ff8800;">Password change cooldown: <span class="fw-bold">${hoursRemaining} hour(s) remaining</span></li>`;
+            passwordCooldownInfo = `<li style="color: #ff8800;">Password change cooldown: <span class="fw-bold">${hoursRemaining} hour${hoursRemaining === 1 ? '' : 's'} remaining</span></li>`;
         } else {
             passwordCooldownInfo = '<li style="color: #00aa00;">Password can be changed</li>';
         }
@@ -116,7 +116,7 @@ router.get('/', async (req, res) => {
         const hoursSinceChange = (now - lastChange) / (1000 * 60 * 60);
         if (hoursSinceChange < 24) {
             const hoursRemaining = Math.ceil(24 - hoursSinceChange);
-            emailCooldownInfo = `<li style="color: #ff8800;">Email change cooldown: <span class="fw-bold">${hoursRemaining} hour(s) remaining</span></li>`;
+            emailCooldownInfo = `<li style="color: #ff8800;">Email change cooldown: <span class="fw-bold">${hoursRemaining} hour${hoursRemaining === 1 ? '' : 's'} remaining</span></li>`;
         } else {
             emailCooldownInfo = '<li style="color: #00aa00;">Email can be changed</li>';
         }
