@@ -1526,7 +1526,7 @@ export class GameServer {
     const infoMessage =
       minutes === 0
         ? "Server shutdown has been initiated."
-        : `Server shutdown in ${minutes} minute(s).`;
+        : `Server shutdown in ${minutes} minute${minutes === 1 ? '' : 's' }.`;
     for (const userId of this.playerStatesByUserId.keys()) {
       this.messageService.sendServerInfo(userId, infoMessage, MessageStyle.Warning);
     }
