@@ -1965,9 +1965,11 @@
 }
 #hs-bank-menu {
     width: 36rem;
+    min-height: 17.5rem;
+    height: 60%;
 }
 #hs-bank-menu__content-container {
-    height: 17.5rem;
+    height: 100%;
     overflow-y: scroll;
     scrollbar-width: initial;
     -ms-overflow-style: initial;
