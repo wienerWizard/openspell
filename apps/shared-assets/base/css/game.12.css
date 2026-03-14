@@ -2373,6 +2373,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     height: calc(var(--hs-action-menu-item-height) * 2);
+    width: 100%;
 }
 .hs-side-action-bar-menu--hidden-minimap>#hs-side-action-bar-menu__action-bar .hs-action-bar-button--large {
     height: var(--hs-action-menu-item-height);
